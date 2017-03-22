@@ -1,3 +1,7 @@
+/* Exercício <8>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*8. Faça um programa em C que pegue uma substring de uma string lida do teclado.
 O usuário deve indicar onde a substring começa e onde ela termina.*/
 
@@ -33,5 +37,8 @@ int main()
             substr[i+1] = '\0';
     }
     printf("String: %s, Substring: %s",str,substr);
-	getch();
+
+	fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

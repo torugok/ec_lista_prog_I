@@ -1,3 +1,7 @@
+/* Exercício <4>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*4. Escreva um programa que leia um vetor double do teclado de 15 posições.
 O programa deve indicar qual o maior e qual o menor valores do vetor na tela.
 */
@@ -12,6 +16,7 @@ int main()
     printf("Insira um valor em %i: ",0);
     scanf("%lf",&vetor[0]);
     maior = vetor[0];menor = vetor[0];
+
     int i;
     for(i = 1; i < 15; i++)
     {
@@ -23,5 +28,8 @@ int main()
             menor = vetor[i];
     }
     printf("Maior %lf ; Menor %lf",maior,menor);
-	getch();
+
+	fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

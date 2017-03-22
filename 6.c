@@ -1,3 +1,7 @@
+/* Exercício <6>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*6. Escreva um programa que leia 20 valores inteiros e armazene-os em um vetor.
 Após isso, deve ser exibido para o usuário duas opções: alterar um valor em uma dada posição, apagar um valor, ou sair do programa.
 O programa só deve encerrar quando o usuário decidir sair.
@@ -42,5 +46,8 @@ int main()
             return 0;
         }
     }
-	getch();
+
+	fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

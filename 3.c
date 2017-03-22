@@ -1,3 +1,7 @@
+/* Exercício <3>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*3. Escreva um programa que leia um vetor inteiro de 20 posições.
 O usuário irá, então, escolher um número e o programa deve indicar quantas vezes esse número ocorre no vetor.
 */
@@ -22,5 +26,8 @@ int main()
             contador++;
     }
     printf("O valor %i, ocorre %i vezes nesse vetor.",num,contador);
-	getch();
+
+	fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

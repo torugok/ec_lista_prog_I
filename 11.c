@@ -1,3 +1,7 @@
+/* Exercício <11>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*11. Faça um programa que, dada um string do teclado, indique se um determinado
 caractere, em determinada posição (indicada pelo usuário) é maiúscula ou minúscula.
 Máximo: 1024 caracteres.*/
@@ -27,5 +31,8 @@ int main()
     {
         printf("Esse caractere eh minusculo");
     }
-	getch();
+
+	fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

@@ -1,3 +1,7 @@
+/* Exercício <10>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*10. Escreva um código em C que leia uma string do teclado. Após isso, o usuário deve ter
 duas opções: converter todos os caracteres para maiúsculos ou todos os caracateres
 para minúsculos. Exiba a string resultante. Máximo: 1024 caracteres.*/
@@ -45,4 +49,8 @@ int main()
     }
 
     printf("String resultante: %s",str);
+
+    fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

@@ -1,3 +1,7 @@
+/* Exercício <12>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*12. Escreva um programa que leia o nome e sobrenome do usuário. O programa deve
 concatenar as duas strings duas vezes. Uma, através de uma função da biblioteca
 string.h. Outra, manualmente, sem utilizar a função. Máximo do nome: 20 caracteres.
@@ -7,9 +11,12 @@ Máximo do sobrenome: 15 caracteres.*/
 #include <stdlib.h>
 #include <string.h>
 
+#define tamnome 20
+#define tamsobre 15
+
 int main()
 {
-    int tamnome = 20,tamsobre = 15, contadornome=0,contadorsobre=0,fator = tamnome+tamsobre;
+    int contadornome=0,contadorsobre=0,fator = tamnome+tamsobre;
     char nome[tamnome],sobrenome[tamsobre], concact[tamnome+tamsobre];
 
     fflush(stdin);
@@ -45,6 +52,7 @@ int main()
     strcat(concact,sobrenome);
     printf("\nCom string.h: %s",concact);
 
+
     for(i=0; i<contadornome;i++)
     {
         concact[i] = nome[i];
@@ -52,8 +60,11 @@ int main()
     concact[contadornome] = ' ';
     for(i=0; i<=contadorsobre; i++)
     {
-        concact[i+contadornome+1] = sobrenome[i];
+        concact[1+i+contadornome] = sobrenome[i];
     }
     printf("\nSem string.h: %s",concact);
-	getch();
+
+	fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

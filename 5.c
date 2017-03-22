@@ -1,3 +1,7 @@
+/* Exercício <5>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*5. Escreva um programa que leia um vetor inteiro do teclado de 25 posições.
 O programa deve exibir na tela a quantidade de número pares e ímpares dentro do vetor.
 Considere apenas números positivos e 0 (zero) como positivo.
@@ -20,6 +24,9 @@ int main()
         else if(vetor[i] >= 0 && vetor[i]%2 == 0)
             pares++;
     }
-    printf("Pares: %i , Impares: %i",pares,impares);
+    printf("Quantidade de Pares: %i\nQuantidade de Impares: %i",pares,impares);
+
+    fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
     getch();
 }

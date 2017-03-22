@@ -1,3 +1,7 @@
+/* Exercício <7>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*7. Faça um programa que leia uma string de até 1024 caracteres e imprima o comprimento dessa string sem utilizar a função da biblioteca string.h.
 O programa deve, também, imprimir a string já sem o caractere de nova linha. Obs: limpe o buffer antes da leitura.
 */
@@ -23,6 +27,8 @@ int main()
     }
     printf("String: \"%s\".\nComprimento: %i.",str,contador);
 
-    printf("\n\nPressione qualquer tecla para sair\n");getch();
-	getch();
+
+    fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
+    getch();
 }

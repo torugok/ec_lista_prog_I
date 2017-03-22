@@ -1,3 +1,7 @@
+/* Exercício <9>
+    Dupla: Victor Hugo Viana Santos, Felipe Vaz Castanheira
+*/
+
 /*9. Faça um programa que verifique se uma substring lida do teclado está presente
 ou não em uma string maior lida anteriormente.
 A existência ou não deve ser mostrada na tela através de uma mensagem.
@@ -5,72 +9,32 @@ Limite da string: 1024 caracteres.*/
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#define tamanho 1024
 
 int main()
 {
-    int TAM = 1024,fimsub=0;
-
-    char str[TAM],substr[TAM],inicio,fim;
+    char str[tamanho],substr[tamanho],inicio,fim;
     fflush(stdin);
-    printf("Insira a string maior: ");fgets(str,TAM,stdin);
+    printf("Insira a string maior: ");fgets(str,tamanho,stdin);
     fflush(stdin);
-    printf("Insira a substring: ");fgets(substr,TAM,stdin);
+    printf("Insira a substring: ");fgets(substr,tamanho,stdin);
     int i;
-    for(i=0; i < TAM; i++)
+    for(i=0; i < tamanho; i++)
     {
-        if(str[i] == '\n')it
+        if(str[i] == '\n')
             str[i] = '\0';
         if(substr[i] == '\n')
             substr[i] = '\0';
     }
-    for(i=0; i < TAM; i++)
-    {
-        if(substr[i] == '\0')
-            break;
-        fimsub++;
-    }
 
-    int presente = 0;
+    if(strstr(str,substr) == 0)
+        printf("Essa string nao esta presente na string maior.");
+    else
+        printf("Essa string esta presente na string maior.");
 
-    if(fimsub == 1)
-    {
-       for(i=0; i<TAM; i++)
-       {
-           if(substr[0]==str[i])
-           {
-               presente = 1;
-               break;
-           }
-       }
-    }
-    else
-    {
-        for(i=0; i < TAM; i++)
-        {
-            if(substr[i] !='\0')
-            {
-                if(substr[0]==str[i])
-                {
-                    int it;
-                    for(it=1; it<fimsub; it++)
-                    {
-                        if(substr[it] == str[i+it])
-                        {
-                            presente = 1;
-                        }
-                        else
-                        {
-                            presente = 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    if(presente == 1)
-        printf("Essa substring esta presente na string maior.");
-    else
-        printf("Essa string nao esta contida na string maior");
-	
+    fflush(stdin);
+    printf("\nPressione qualquer tecla para sair.");
     getch();
 }
