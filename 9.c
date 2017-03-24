@@ -11,11 +11,11 @@ Limite da string: 1024 caracteres.*/
 #include <stdlib.h>
 #include <string.h>
 
-#define tamanho 1024
+#define tamanho 1025
 
 int main()
 {
-    char str[tamanho],substr[tamanho],inicio,fim;
+    char str[tamanho],substr[tamanho];
     fflush(stdin);
     printf("Insira a string maior: ");fgets(str,tamanho,stdin);
     fflush(stdin);

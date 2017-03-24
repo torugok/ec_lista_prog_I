@@ -11,9 +11,11 @@ para minúsculos. Exiba a string resultante. Máximo: 1024 caracteres.*/
 #include <string.h>
 #include <ctype.h>
 
+#define TAM 1025
+
 int main()
 {
-    int TAM = 1024, contador=0;
+    int contador=0;
     char str[TAM];
 
     fflush(stdin);

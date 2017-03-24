@@ -8,37 +8,33 @@ O usuário deve indicar onde a substring começa e onde ela termina.*/
 #include <stdio.h>
 #include <stdlib.h>
 
+#define tamanho 1024
+
 int main()
 {
-    int TAM = 1024;
-
-    char str[TAM],substr[TAM],inicio,fim;
+    char str[tamanho],substr[tamanho];
+    int contador=0;
     fflush(stdin);
-    fgets(str,TAM,stdin);
+    printf("Insira uma string: "); fgets(str,tamanho,stdin);
     int i;
-    for(i=0; i<TAM; i++)
+    for(i=0; i<tamanho; i++)
     {
-        if(str[i]== '\n')
+        if(str[i] == '\n')
         {
             str[i] = '\0';
             break;
         }
     }
-
-    printf("Digite onde a substring comeca: ");
-    scanf("%i",&inicio);
-    printf("Digite onde a substring termina: ");
-    scanf("%i",&fim);
+    int inicio,fim;
+    fflush(stdin);
+    printf("Insira o inicio da substring: ");scanf("%i",&inicio);
+    printf("Insira o fim da substring: ");scanf("%i",&fim);
 
     for(i=inicio; i<=fim; i++)
-    {
-        substr[i] = str[i];
-        if(i==fim)
-            substr[i+1] = '\0';
-    }
-    printf("String: %s, Substring: %s",str,substr);
-
-	fflush(stdin);
-    printf("\nPressione qualquer tecla para sair.");
-    getch();
+        contador++;
+    for(i = 0; i<contador; i++)
+        substr[i] = str[i+inicio];
+    substr[contador] = '\0';
+    printf("Substring: %s",substr);
 }
+

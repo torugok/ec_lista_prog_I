@@ -11,19 +11,25 @@ O programa deve, também, imprimir a string já sem o caractere de nova linha. Obs
 
 int main()
 {
-    char str[1024],contador=0;
+    char str[1025];
+    int contador=0;
     fflush(stdin);
-    printf("Insira uma frase e saiba seu comprimento: ");fgets(str,1024,stdin);
+    printf("Insira uma frase e saiba seu comprimento: ");
+    fgets(str,1025,stdin);
     int i ;
-    for(i=0; i<1024; i++)
+    for(i=0; i<1025; i++)
     {
         if(str[i]== '\n')
         {
             str[i] = '\0';
             break;
         }
-        else
-            contador++;
+    }
+
+    for(contador; contador<1025; contador++)
+    {
+        if(str[contador] == '\0')
+            break;
     }
     printf("String: \"%s\".\nComprimento: %i.",str,contador);
 

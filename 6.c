@@ -30,24 +30,32 @@ int main()
         case 1:
             printf("Insira a posicao a ser alterada: ");
             scanf("%i",&pos);
-            printf("Valor: ");
-            scanf("%i",&valor);
-            vetor[pos] = valor;
+            if(pos>19 || pos < 0)
+                printf("\nPosicao invalida.\n");
+            else{
+                printf("Valor: ");
+                scanf("%i",&valor);
+                vetor[pos] = valor;
+
+            }
             break;
         case 2:
             printf("Insira a posicao a ser apagada: ");
             scanf("%i",&pos);
-            for(i=pos; i < 20; i++)
+            if(pos>19 || pos < 0)
+                printf("\nPosicao invalida.\n");
+            if(pos == 19)
+                vetor[pos] = 0;
+            else
             {
-                vetor[i] = vetor[i+1];
+                for(i=pos; i < 19; i++)
+                {
+                    vetor[i] = vetor[i+1];
+                }
             }
             break;
         case 3:
-            return 0;
+            return 666; //capiroto liked this
         }
     }
-
-	fflush(stdin);
-    printf("\nPressione qualquer tecla para sair.");
-    getch();
 }

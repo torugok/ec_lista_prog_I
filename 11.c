@@ -9,9 +9,12 @@ Máximo: 1024 caracteres.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+
+#define TAM 1025
+
 int main()
 {
-    int TAM = 1024, contador=0;
+    int contador=0;
     char str[TAM];
 
     fflush(stdin);
@@ -19,8 +22,10 @@ int main()
     fgets(str,TAM,stdin);
 
 
+
     printf("\nInsira uma posicao: ");
     int pos;
+    fflush(stdin);
     scanf("%i",&pos);
 
     if(isupper(str[pos]))

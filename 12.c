@@ -11,13 +11,12 @@ Máximo do sobrenome: 15 caracteres.*/
 #include <stdlib.h>
 #include <string.h>
 
-#define tamnome 20
-#define tamsobre 15
+#define tamnome 21
+#define tamsobre 16
 
 int main()
 {
-    int contadornome=0,contadorsobre=0,fator = tamnome+tamsobre;
-    char nome[tamnome],sobrenome[tamsobre], concact[tamnome+tamsobre];
+    char nome[tamnome],sobrenome[tamsobre], concact[37];
 
     fflush(stdin);
     printf("Insira um nome: ");
@@ -35,7 +34,6 @@ int main()
             nome[i] = '\0';
             break;
         }
-        contadornome++;
     }
     for(i=0; i<tamsobre; i++)
     {
@@ -44,8 +42,8 @@ int main()
             sobrenome[i] = '\0';
             break;
         }
-        contadorsobre++;
     }
+
 
     strcpy(concact,nome);
     strcat(concact," ");
@@ -53,15 +51,22 @@ int main()
     printf("\nCom string.h: %s",concact);
 
 
-    for(i=0; i<contadornome;i++)
+    int lennome = strlen(nome);
+    int lensobre = strlen(sobrenome);
+
+    for(i=0; i<lennome;i++)
     {
         concact[i] = nome[i];
     }
-    concact[contadornome] = ' ';
-    for(i=0; i<=contadorsobre; i++)
+    concact[i] = ' ';
+
+    int p;
+    for(p=0; p<lensobre; p++)
     {
-        concact[1+i+contadornome] = sobrenome[i];
+        i++;
+        concact[i] = sobrenome[p];
     }
+
     printf("\nSem string.h: %s",concact);
 
 	fflush(stdin);

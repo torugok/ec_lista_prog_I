@@ -23,6 +23,8 @@ int main()
             impares++;
         else if(vetor[i] >= 0 && vetor[i]%2 == 0)
             pares++;
+        else
+            printf("Numero menor que zero desconsiderado.\n");
     }
     printf("Quantidade de Pares: %i\nQuantidade de Impares: %i",pares,impares);
 
